@@ -10,7 +10,7 @@ class rest_parsing{
 	function __construct($query) {
 		$this->query = $query;
 		$this->loadData();
-		echo CAdminMessage::ShowNote("тестовый Модуль был установлен");
+		echo CAdminMessage::ShowNote("Тестовый Модуль был установлен");
 	}
 
 	private function FieldTypeBlock(){
@@ -131,7 +131,6 @@ class rest_parsing{
 		}
 		 
 		$obBlockType = new CIBlockType;
-		 
 		if ($boolIblockExists) {
 		    if ($obBlockType->Update($this->FieldTypeBlock()['ID'], $this->FieldTypeBlock())) {
 		        $this->$info[] = $this->oGetMessage('A_AM_NEW_IBLOCK_TYPE_MESSAGE_UPDATE', array(

@@ -43,6 +43,7 @@ class g2r_test extends CModule
     {
         $this->uninstallDB();
         ModuleManager::unRegisterModule($this->MODULE_ID);
+        $GLOBALS["APPLICATION"]->IncludeAdminFile("Удаление модуля", __DIR__ . "/unstep.php");
     }
 
     public function installDB()
@@ -55,6 +56,7 @@ class g2r_test extends CModule
 
     public function uninstallDB()
     {
+
         if (Loader::includeModule($this->MODULE_ID))
         {
             $connection = Application::getInstance()->getConnection();
