@@ -1,0 +1,24 @@
+{
+  "name": "bitrix-expert/g2r.test",
+  "description": "Модуль тестового задания для g2r limited приема на работу",
+  "keywords": ["bitrix", "Битрикс", "d7", "модуль"],
+  "type": "bitrix-module",
+  "license": "MIT",
+  "support": {
+    "www": "http://forttran.ru",
+    "skype": "fortran",
+    "source": "http://fortran.ru"
+  },
+  "authors": [
+    {
+      "name": "Васильев Сергей",
+      "email": "forttran@mail.ru"
+    }
+  ],
+  "extra": {
+    "installer-name": "g2r.test"
+  },
+  "require": {
+    "composer/installers": ">=1.0.22 <2.0"
+  }
+}
