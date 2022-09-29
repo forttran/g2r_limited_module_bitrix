@@ -310,7 +310,15 @@ class rest_parsing{
 			$DB->Commit();
 		} catch (\Bitrix\Main\SystemException $e) {
 			$DB->Rollback();
-			echo sprintf("%s<br>\n%s",$e->getMessage(),implode("<br>\n", $info));
+
+			foreach($this->$info as $mess){
+		    	echo CAdminMessage::ShowNote(array(
+					"TYPE" => "ERROR",
+					"MESSAGE" => $mess,
+					"DETAILS" => $ex->GetString(),
+					"HTML" => true,
+				));
+		    }
 		}
 	}
 }
